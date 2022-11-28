@@ -1,0 +1,14 @@
+stages:
+  - tests
+
+molecule_tests:
+  stage: tests
+  tags:
+    - ansible-roles
+    - shell
+    - infra
+  script:
+    - pipenv install
+    - export VENV_HOME_DIR=$(pipenv --venv)
+    - source $VENV_HOME_DIR/bin/activate
+    - ansible-lint . && (deactivate && pipenv --rm && exit 0) || (deactivate && pipenv --rm && exit 1)

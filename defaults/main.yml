@@ -1,0 +1,6 @@
+---
+crond_package: "cron"
+crond_service: "cron"
+crond_configuration_file: "/etc/default/cron"
+crond_restart_when_changed: true
+crond_extra_options: ""

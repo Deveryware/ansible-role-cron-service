@@ -1,0 +1,5 @@
+---
+- name: Debian - Ensure Cron Daemon package is installed.
+  apt:
+    name: "{{ crond_package }}"
+    state: present

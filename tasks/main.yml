@@ -1,0 +1,10 @@
+---
+- name: Execute OS-specific tasks.
+  include_tasks: install-{{ ansible_distribution }}.yml
+
+- name: Change Cron daemon configuration
+  lineinfile:
+    path: "{{ crond_configuration_file }}"
+    regexp: "EXTRA_OPTS=" 
+    line: "EXTRA_OPTS=\"{{ crond_extra_options }}\""
+  notify: Restart Cron daemon

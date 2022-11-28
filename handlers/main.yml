@@ -1,0 +1,6 @@
+---
+- name: Restart Cron daemon
+  service:
+    name: cron
+    state: restarted
+  when: crond_restart_when_changed
