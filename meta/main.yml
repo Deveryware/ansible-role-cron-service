@@ -3,7 +3,7 @@ galaxy_info:
   author: Nicolas de Ferrieres
   description: Configure cron deamon
   company: Deveryware SAS
-  license: Proprietary
+  license: MIT
   min_ansible_version: 2.7
   platforms:
     - name: Debian
