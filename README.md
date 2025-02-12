@@ -17,7 +17,7 @@ Role Variables
 | `cron_restart_when_changed` | If True: restart cron when configuration is changed | 'true' |
 | `crond_package` | Name of cron daemon package | 'cron' |
 | `crond_service` | Name of cron draemon service | 'cron' |
-|  ̀crond_configuration_file` | configuration file for cron daemon | '/etc/default/cron' |
+| `crond_configuration_file` | configuration file for cron daemon | '/etc/default/cron' |
 
 
 Cron options
